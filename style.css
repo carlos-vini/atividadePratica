@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    /* ## Colors */
+
+    /* ### Primary */
+
+    --soft-red: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+
+    /* ### Neutral */
+
+    --dark-brown: hsl(25, 47%, 15%);
+    --medium-brown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --very-pale-orange: hsl(33, 100%, 98%);
+}
+
+html, body{
+    font-family: 'DM Sans', sans-serif;
+    Font-size: 18px;
+    background-color: var(--cream);
+}
+
+.container{
+    /* max-width: 1440px;
+    min-width: 375px; */
+}
+
+header{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 550px;
+    border-radius: 20px;
+
+    margin: 40px auto 20px;
+
+    background-color: var(--soft-red);
+
+    color: var(--very-pale-orange);
+}
+
+header p{
+    margin-bottom: 10px;
+    font-size: .7rem;
+    font-weight: 400;
+}
+
+header h4{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+main{
+    width: 550px;
+    background-color: var(--very-pale-orange);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 0 auto;
+}
+
+main h1{
+    font-size: 1.5rem;
+}
+
+main .graphics{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding: 30px 15px;
+    height: 100%;
+}
+
+main .graphics p{
+    font-size: .8rem;
+    color: var(--medium-brown);
+}
+
+main .graphics .bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .graphics #mon, #tue, #wed, #thu, #fri, #sat, #sun{
+    border-radius: 5px;
+}
+
+/* main .graphics #wed{
+    background-color: var(--cyan);
+    padding: 52.36px 20px;
+    border-radius: 5px;
+} */
+
+hr{
+    opacity: 40%;
+}
+
+main .footer{
+    padding-top: 20px;
+}
+
+main .footer p{
+    font-size: .8rem;
+    font-weight: 400;
+    color: var(--medium-brown);
+}
+
+main .footer .result{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .footer .result h1{
+    font-size: 2rem;
+}
+
+main .footer .result h5{
+    text-align: right;
+}
+
+@media screen and (max-width: 550px) {
+    header, main{
+        width: 350px;
+    }
+
+    main .graphics{
+        gap: 5px;
+        justify-content: center;
+    }
+
+    main .graphics .bar #mon, #tue, #wed, #thu, #fri, #sat, #sun{
+        padding-left: px;
+        padding-right: 5px;
+    }
+}
